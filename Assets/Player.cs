@@ -12,6 +12,11 @@ public class Player : MonoBehaviour
 
 	void Update ()
 	{
-		
+		if (CrossPlatformInputManager.GetButtonDown ("right")) {
+			// will move the ball right
+		}
+		if (CrossPlatformInputManager.GetButtonDown ("left")) {
+			// will move the ball left
+		}
 	}
 }
