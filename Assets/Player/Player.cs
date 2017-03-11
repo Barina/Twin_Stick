@@ -5,6 +5,8 @@ using UnityStandardAssets.CrossPlatformInput;
 
 public class Player : MonoBehaviour
 {
+	public new Camera camera;
+
 	void Start ()
 	{
 		
@@ -12,11 +14,8 @@ public class Player : MonoBehaviour
 
 	void Update ()
 	{
-		if (CrossPlatformInputManager.GetButtonDown ("right")) {
-			// will move the ball right
-		}
-		if (CrossPlatformInputManager.GetButtonDown ("left")) {
-			// will move the ball left
-		}
+		Vector3 pos = camera.transform.position;
+		pos.z = transform.position.z;
+		camera.transform.position = pos;
 	}
 }
